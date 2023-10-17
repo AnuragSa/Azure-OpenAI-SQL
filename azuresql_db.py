@@ -4,7 +4,7 @@ import pyodbc
 server = 'anurag-ai-demo-db.database.windows.net'
 database = 'azurag-ai-demo-database'
 username = 'anuragadmin'
-password = 'FfpPg53Z4deO#&WG'
+password = ''
 
 # Create a connection string
 connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:anurag-ai-demo-db.database.windows.net,1433;Database=azurag-ai-demo-database;Uid=anuragadmin;Pwd='+password+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
