@@ -11,23 +11,25 @@ server = os.getenv('SERVER')
 database = os.getenv('DATABASE')
 username = os.getenv('AZURESQL_DB_USERNAME')
 password = os.getenv('AZURESQL_DB_PASSWORD')
-# Create a connection string
-connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:anurag-ai-demo-db.database.windows.net,1433;Database=azurag-ai-demo-database;Uid='+username+';Pwd='+password+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 
-# Connect to the database
-connection = pyodbc.connect(connection_string)
+def get_schema():
+    # Create a connection string
+    connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:anurag-ai-demo-db.database.windows.net,1433;Database=azurag-ai-demo-database;Uid='+username+';Pwd='+password+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 
-# Create a cursor
-cursor = connection.cursor()
+    # Connect to the database
+    connection = pyodbc.connect(connection_string)
 
-cursor.execute("SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'StudentData'")
+    # Create a cursor
+    cursor = connection.cursor()
 
-db_schema = cursor.fetchall()
-print(db_schema)
+    cursor.execute("SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'StudentData'")
 
-cursor.close()    
-connection.close()
+    db_schema = cursor.fetchall()
+    print(db_schema)
 
+    cursor.close()    
+    connection.close()
+    return db_schema
 
 
 
