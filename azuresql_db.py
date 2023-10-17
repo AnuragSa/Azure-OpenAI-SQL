@@ -24,24 +24,7 @@ cursor.execute("SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WH
 
 db_schema = cursor.fetchall()
 print(db_schema)
-'''
-db_schema = {}
 
-for table in tables:
-    table_name = table[0]
-    
-    # Query to get column details for each table
-    cursor.execute(f"PRAGMA table_info({table_name});")
-    columns = cursor.fetchall()
-    
-    column_details = {}
-    for column in columns:
-        column_name = column[1]
-        column_type = column[2]
-        column_details[column_name] = column_type
-    
-    db_schema[table_name] = column_details
-'''
 cursor.close()    
 connection.close()
 
