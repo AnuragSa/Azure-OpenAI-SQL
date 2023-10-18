@@ -15,6 +15,7 @@ def query_database(query):
 # Create or connect to SQLite database
 conn = sql_db.create_connection()
 
+
 # Schema Representation for finances table
 schemas = sql_db.get_schema_representation()
 print(schemas['finances'])
