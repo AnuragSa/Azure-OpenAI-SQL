@@ -13,14 +13,7 @@ load_dotenv()
 
 connection_string = 'mssql+pyodbc://'+os.getenv('AZURESQL_DB_USERNAME')+':'+os.getenv('AZURESQL_DB_PASSWORD')+'@'+os.getenv('SERVER')+':1433/'+os.getenv('DATABASE')+'?driver=ODBC+Driver+18+for+SQL+Server;encrypt=true;connect_timeout=30'
 
-""" connection_string = (
-    "mssql+pyodbc://"+os.getenv('AZURESQL_DB_USERNAME')+":"+os.getenv('AZURESQL_DB_PASSWORD')+"@"
-    ""+os.getenv('SERVER')+":1433/your_database?"
-    "driver=ODBC+Driver+17+for+SQL+Server;"
-    "AUTOCOMMIT=True;APP=MyApp;encrypt=yes;login_timeout=15"
-)
 
- """
 
 def query_database(query):
     # Connect to the database
@@ -28,13 +21,8 @@ def query_database(query):
     return pd.read_sql_query(sql=query, con=connection)
 
 
-
-
-
-
 # Schema Representation for finances table
 schema = sql_db.get_schema()
-print(schema)
 
 # Format the system message with the schema
 formatted_system_message = SYSTEM_MESSAGE.format(schema=schema)
