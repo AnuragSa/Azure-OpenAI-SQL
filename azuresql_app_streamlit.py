@@ -14,7 +14,7 @@ import pyodbc
 
 load_dotenv()
 
-connection_string = 'mssql+pyodbc://'+os.getenv('AZURESQL_DB_USERNAME')+':'+os.getenv('AZURESQL_DB_PASSWORD')+'@'+os.getenv('SERVER')+':1433/'+os.getenv('DATABASE')+'?driver=ODBC+Driver+18+for+SQL+Server;encrypt=true;connect_timeout=30'
+#connection_string = 'mssql+pyodbc://'+os.getenv('AZURESQL_DB_USERNAME')+':'+os.getenv('AZURESQL_DB_PASSWORD')+'@'+os.getenv('SERVER')+':1433/'+os.getenv('DATABASE')+'?driver=ODBC+Driver+18+for+SQL+Server;encrypt=true;connect_timeout=30'
 
 def query_database(query):
     # Connect to the database
@@ -26,8 +26,8 @@ def query_database(query):
 schema = sql_db.get_schema()
 
 st.set_page_config(layout="wide")
-st.title("SQL Query Generator with GPT-4")
-st.write("Enter your message to generate SQL and view results.")
+st.title("Query Your SQL Data with GPT-4")
+st.write("Enter your message to view results.")
 
 # Input field for the user to type a message
 user_message = st.text_input("Enter your message:")

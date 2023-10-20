@@ -10,10 +10,10 @@ from sqlalchemy import create_engine
 import pyodbc
 
 load_dotenv()
-
+""" 
 connection_string = 'mssql+pyodbc://'+os.getenv('AZURESQL_DB_USERNAME')+':'+os.getenv('AZURESQL_DB_PASSWORD')+'@'+os.getenv('SERVER')+':1433/'+os.getenv('DATABASE')+'?driver=ODBC+Driver+18+for+SQL+Server;encrypt=true;connect_timeout=30'
 
-
+ """
 
 def query_database(query):
     # Connect to the database
@@ -28,7 +28,7 @@ schema = sql_db.get_schema()
 formatted_system_message = SYSTEM_MESSAGE.format(schema=schema)
 
 # Generate the SQL query from the user message
-user_message = "how many have pending tuition less than 15000 with their names and amount"
+user_message = "show me all records"
 
 # Use GPT-4 to generate the SQL query
 response = get_completion_from_messages(formatted_system_message, user_message)
