@@ -24,13 +24,15 @@ def get_schema():
     # Create a cursor
     cursor = connection.cursor()
 
-    cursor.execute("SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'StudentAccount'")
+    #cursor.execute("SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'StudentAccount'")
+    cursor.execute("SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME IN ('StudentAccounting','StudentAcademic','StudentProfile','Courses')")
+
+
 
     db_schema = cursor.fetchall()
 
     cursor.close()    
     connection.close()
-    print(db_schema)
     return db_schema
 
 

@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 import pandas as pd
 import azuresql_db as sql_db
-from prompts.prompts import SYSTEM_MESSAGE
+from prompts.prompts import SYSTEM_MESSAGE, SYSTEM_MESSAGE_1
 from azuresql_openai import get_completion_from_messages
 import json
 from sqlalchemy import create_engine
@@ -19,7 +19,8 @@ load_dotenv()
 def query_database(query):
     # Connect to the database
     connection = pyodbc.connect(sql_db.connection_string)
-    return pd.read_sql_query(sql=query, con=connection)
+    df = pd.read_sql_query(sql=query, con=connection)
+    return df 
 
 
 # Schema Representation for finances table
@@ -34,19 +35,22 @@ user_message = st.text_input("Enter your message:")
 
 if user_message:
     # Format the system message with the schema
-    formatted_system_message = SYSTEM_MESSAGE.format(schema=schema)
-
+    formatted_system_message = SYSTEM_MESSAGE_1.format(schema=schema)
+    print("before call to openai")
+    print(formatted_system_message)
+    print(user_message)
     # Use GPT-4 to generate the SQL query
     response = get_completion_from_messages(formatted_system_message, user_message)
     json_response = json.loads(response)
     query = json_response['query']
-
+    
     # Display the generated SQL query
     st.write("Generated SQL Query:")
     st.code(query, language="sql")
-
+    print("before executing sql")
     try:
         # Run the SQL query and display the results
+        print(query)
         sql_results = query_database(query)
         container = st.container()
 
