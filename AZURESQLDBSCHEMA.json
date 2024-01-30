@@ -1,0 +1,416 @@
+[
+  {
+    "Table_Name": "Courses",
+    "Column_Name": "CourseID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "Courses",
+    "Column_Name": "AcademicID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": "FK__Courses__Academi__10566F31",
+    "Referenced_Table": "StudentAcademic",
+    "Referenced_Column": "AcademicID"
+  },
+  {
+    "Table_Name": "Courses",
+    "Column_Name": "Program",
+    "Data_Type": "nvarchar",
+    "Max_Length": 200,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "Courses",
+    "Column_Name": "CourseName",
+    "Data_Type": "nvarchar",
+    "Max_Length": 200,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "Courses",
+    "Column_Name": "CourseCode",
+    "Data_Type": "nvarchar",
+    "Max_Length": 20,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "Courses",
+    "Column_Name": "Credits",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "Courses",
+    "Column_Name": "SemesterOffered",
+    "Data_Type": "nvarchar",
+    "Max_Length": 100,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "AcademicID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "StudentID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": "FK__StudentAc__Stude__0A9D95DB",
+    "Referenced_Table": "StudentProfile",
+    "Referenced_Column": "StudentID"
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "Major",
+    "Data_Type": "nvarchar",
+    "Max_Length": 200,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "GPA",
+    "Data_Type": "decimal",
+    "Max_Length": 5,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "CreditsEarned",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "Program",
+    "Data_Type": "nvarchar",
+    "Max_Length": 200,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "Semester",
+    "Data_Type": "nvarchar",
+    "Max_Length": 100,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAcademic",
+    "Column_Name": "StartDate",
+    "Data_Type": "date",
+    "Max_Length": 3,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "StudentID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "CampusName",
+    "Data_Type": "varchar",
+    "Max_Length": 255,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "TuitionFees",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "RoomBoardFees",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "BooksSupplies",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "ScholarshipAmount",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "FederalAidAmount",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "StateAidAmount",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "OutstandingBalance",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "PaymentPlan",
+    "Data_Type": "varchar",
+    "Max_Length": 50,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccount",
+    "Column_Name": "Semester",
+    "Data_Type": "varchar",
+    "Max_Length": 50,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "AccountingID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "StudentID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": "FK__StudentAc__Stude__0D7A0286",
+    "Referenced_Table": "StudentProfile",
+    "Referenced_Column": "StudentID"
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "TuitionDue",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "BookFee",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "RoomFee",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "FinancialAid",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "Scholarship",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentAccounting",
+    "Column_Name": "Balance",
+    "Data_Type": "decimal",
+    "Max_Length": 9,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentData",
+    "Column_Name": "StudentID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentData",
+    "Column_Name": "FirstName",
+    "Data_Type": "varchar",
+    "Max_Length": 255,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentData",
+    "Column_Name": "LastName",
+    "Data_Type": "varchar",
+    "Max_Length": 255,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentData",
+    "Column_Name": "AcademicTerm",
+    "Data_Type": "varchar",
+    "Max_Length": 255,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentData",
+    "Column_Name": "TuitionAmount",
+    "Data_Type": "float",
+    "Max_Length": 8,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentData",
+    "Column_Name": "ScholarshipAmount",
+    "Data_Type": "float",
+    "Max_Length": 8,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentData",
+    "Column_Name": "NetTuitionAmount",
+    "Data_Type": "float",
+    "Max_Length": 8,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentProfile",
+    "Column_Name": "StudentID",
+    "Data_Type": "int",
+    "Max_Length": 4,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentProfile",
+    "Column_Name": "FirstName",
+    "Data_Type": "nvarchar",
+    "Max_Length": 100,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentProfile",
+    "Column_Name": "LastName",
+    "Data_Type": "nvarchar",
+    "Max_Length": 100,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentProfile",
+    "Column_Name": "DateOfBirth",
+    "Data_Type": "date",
+    "Max_Length": 3,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  },
+  {
+    "Table_Name": "StudentProfile",
+    "Column_Name": "Gender",
+    "Data_Type": "nvarchar",
+    "Max_Length": 20,
+    "FK_name": null,
+    "Referenced_Table": null,
+    "Referenced_Column": null
+  }
+]
